@@ -1,0 +1,18 @@
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files (optional but recommended)
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Other common files to ignore
+node_modules/
+*.log 

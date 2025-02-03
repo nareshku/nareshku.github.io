@@ -1,0 +1,170 @@
+/* Base styles */
+:root {
+    --primary-color: #3498db;
+    --text-color: #333;
+    --heading-color: #2c3e50;
+    --background-light: #f8f9fa;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+/* Container responsiveness */
+.container {
+    margin-top: 2rem;
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    color: var(--heading-color);
+    word-wrap: break-word;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+h2 {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+}
+
+.highlight-box {
+    background: var(--background-light);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 4px solid var(--primary-color);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.emoji {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-right: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    word-break: break-word;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.highlight-item {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    border-left: 2px solid var(--primary-color);
+}
+
+/* Media Queries */
+/* Mobile devices (up to 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .highlight-box {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
+    .highlight-item {
+        padding-left: 15px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Tablets (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+}
+
+/* Laptops and larger tablets (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        padding: 20px;
+        max-width: 90%;
+    }
+}
+
+/* Large screens (above 1024px) */
+@media screen and (min-width: 1025px) {
+    body {
+        max-width: 900px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #e1e1e1;
+        --heading-color: #ffffff;
+        --background-light: #2c3e50;
+    }
+    
+    body {
+        background-color: #1a1a1a;
+    }
+    
+    .highlight-box {
+        background: var(--background-light);
+    }
+}
+
+/* Add these new styles */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--primary-color);
+    flex-shrink: 0;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
